@@ -279,3 +279,207 @@ console.log('19' - '13' + 17); // -> 23
 console.log('123' < 57); // -> false
 console.log(5 + 6 + '4' + 9 - 4 - 2); // -> 1143
 */
+
+
+/*
+                      //Truthy and Falsy Values
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean({}));
+console.log(Boolean("Godung"));
+console.log(Boolean(""));
+
+const money = 0;
+if (money) {
+  console.log("Yeah, Money money money!");
+} else {
+  console.log("Money is Undefined");
+}
+
+let pop;
+
+if (pop) {
+  console.log("pop , defined");
+} else {
+  console.log("Undefined :(");
+}
+// 5 Falsy value: 0, "", undefined, null, NaN
+*/
+
+
+/*
+                      //Equality Operators: == vs. ===
+const age = "18";
+if (age == 18) console.log("Wow you become adult :) (loose)");
+if (age === 18) console.log("Wow you become adult :) (strict)");
+
+const height = Number(prompt("How tall are you ?"));
+if (height === 10) {
+  console.log("10 is good");
+} else if (height === 20) {
+  console.log("Wow 20");
+} else {
+  console.log("Why is it not 10 and 20");
+}
+
+if (height !== 20) console.log("It should be 20 :(");
+
+// Strict version : ===, !== (it does not perform type coercion)
+// Loose version : ==, !=
+
+    // Quiz
+const numNeighbours = Number(prompt('How many neighbour countries does your contry have?'));
+if (numNeighbours === 1) {
+  console.log("Only 1 Border!")
+} else if (numNeighbours > 1) {
+  console.log("More than 1 border");
+} else {
+  console.log("No borders");
+}
+*/
+
+
+/*
+                      // Logical Operators
+const hasDrivesLicense = true; // A
+const hasGoodVision = true // B
+console.log(hasDrivesLicense && hasGoodVision);
+console.log(hasDrivesLicense || hasGoodVision);
+console.log(!hasDrivesLicense);
+
+const isTried = false; // C
+const goodDrive = hasDrivesLicense && hasGoodVision && !isTried
+if (goodDrive) {
+  console.log("Godung is able to Drive");
+} else {
+  console.log("Someone else should drive");
+}
+// && = AND, || = OR, ! = Not
+
+    // Quiz
+const language = "Thai";
+const country = "Thailand";
+const island = false;
+let thaiPop = 11;
+if (language === "Thai" && thaiPop < 50 && !island) {
+  console.log(`You should live in ${country} :)`);
+} else {
+  console.log(`${country} does not meet your criteria :(`);
+}
+*/
+
+
+/*
+        // CHALLENGE #3
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+if (scoreDolphins > scoreKoalas) {
+    console.log("Dolphins win the trophy");
+} else if (scoreKoalas > scoreDolphins) {
+    console.log("Koalas win the trophy");
+} else {
+    console.log("Both win the trophy");
+}
+*/
+
+
+/*
+                      // The switch Statement
+const day = "monday";
+switch (day) {
+  case "monday": // day === "monday" (strict)
+    console.log("Climbing day");
+    console.log(":(")
+    break;
+  case "tuesday":
+    console.log("Time to work");
+    break;
+  case "wednesday":
+  case "Thursday":
+    console.log("Dancing class")
+    break;
+  case "friday":
+    console.log("Just happy day");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy weekend");
+    break;
+  default:
+    console.log("nothing");
+}
+
+if (day === "monday") {
+  console.log("Climbing day");
+  console.log(":(")
+} else if (day === "tuesday") {
+  console.log("Time to work");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Dancing class")
+} else if (day === "friday") {
+  console.log("Just happy day");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy weekend");
+} else {
+  console.log("nothing");
+}
+
+    // Quiz
+const language = "mandarin";
+switch (language) {
+  case "chinese":
+  case "mandarin":
+    console.log("MOST number of native speakers!");
+    break;
+  case "spanish":
+    console.log("2nd place in number of native speakers");
+    break;
+  case "endlish":
+    console.log("3rd place");
+    break;
+  case "hindi":
+    console.log("Number 4");
+    break;
+  case "arabic":
+    console.log("5th most spoken language");
+    break;
+  default:
+    console.log("Great language too :D");
+    break;
+}
+*/
+
+
+/*
+                      // The Conditional (Ternary) Operator
+const age = 22;
+age >= 18 ? console.log("I love drink beer 🍺") : console.log("I love drink tea 🍵");
+
+const drink = age >= 18 ? "beer 🍺" : "tea 🍵";
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = "beer 🍺";
+} else {
+  drink2 = "tea 🍵";
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? "beer 🍺" : "tea 🍵"}`);
+
+    // Quiz
+const thaiPop = 130;
+console.log(`Thailand's population is ${thaiPop >= 33 ? "above" : "below"} average`);
+*/
+
+
+/*
+        // CHALLENGE #4
+const bill = 275;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`the bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}.`);
+*/
+
+
+
