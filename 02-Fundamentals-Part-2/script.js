@@ -107,5 +107,31 @@ console.log(thaiPopPer3, japanPopPer3, finlandPopPer3);
 */
 
 
+/*
+                      // Functions Calling Other Functions
+const cutMachine = ingredient => ingredient * 6;
 
+function myKFC(chiken, potato) {
+  const nuggetPieces = cutMachine(chiken);
+  const frenchFriesPieces = cutMachine(potato);
+  return `Combo KFC have ${nuggetPieces} pieces of nugget and ${frenchFriesPieces} pieces of french fries`;
+}
+console.log(myKFC(7, 10));
+
+// Quiz
+function describePopulation(country, poppulation) {
+  const popPer = percentageOfWorld1(poppulation);
+  return `${country} has ${poppulation} million people, which is about ${popPer}% of the world`
+}
+function percentageOfWorld1(population) {
+  return population / 7900 * 100;
+}
+const thaiPopPer1 = describePopulation("Thailand", 300);
+const japanPopPer1 = describePopulation("Japan", 200);
+const finlandPopPer1 = describePopulation("Finland", 600);
+
+console.log(thaiPopPer1);
+console.log(japanPopPer1);
+console.log(finlandPopPer1);
+*/
 
