@@ -84,7 +84,27 @@ console.log(`Thai ${thaiPopPer2}, Japan ${japanPopPer2}, Finland ${finlandPopPer
 */
 
 
+/*
+                      // Arrow Functions
+const bornYear1 = age => 2025 - age;
+const godungAge1 = bornYear1(23);
+console.log(godungAge1);
 
+const bornYear2 = (age, firstname) => {
+  const year = 2025 - age;
+  return `${firstname} was born in ${year}`;
+}
+
+console.log(bornYear2(23, "Godung"));
+
+    // Quiz
+const percentageOfWorld3 = poppulation => poppulation / 7900 * 100;
+const thaiPopPer3 = percentageOfWorld3(300);
+const japanPopPer3 = percentageOfWorld3(200);
+const finlandPopPer3 = percentageOfWorld3(600);
+
+console.log(thaiPopPer3, japanPopPer3, finlandPopPer3);
+*/
 
 
 
