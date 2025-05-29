@@ -136,8 +136,8 @@ console.log(finlandPopPer1);
 */
 
 
-
-// CHALLENGE #4
+/*
+        // CHALLENGE #4
 const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
 const scoreDolphins = calcAverage(44, 23, 71);
@@ -153,3 +153,58 @@ const checkWinner = function (avgDolphins, avgKoalas) {
   }
 }
 checkWinner(scoreDolphins, scoreKoalas);
+*/
+
+
+/*
+                      // Introduction to Arrays
+const friend1 = "Godung";
+const friend2 = "Tom";
+const friend3 = "John";
+
+const friends = ["Godung", "Tom", "John"]; // Godung = 0, Tom = 1, John = 2
+console.log(friend1, friend2, friend3);
+console.log(friends);
+
+const age = new Array("Ten", 20, 30); // another way to creating Array
+console.log(age);
+
+console.log(friends[0]); // 0 = Godung
+console.log(friends[1]);
+
+console.log(friends.length); // num of friends = 3
+console.log(friends[friends.length - 1]); // - 1 because Array start count from 0
+
+friends[2] = "Peter"; // can be change element of Array
+console.log(friends);
+// friends = ["King, God"]; can't replace entire of Array (const)
+
+const firstName = "Parnu";
+const something = [firstName, 20 - 10, 20 < 10, friends, age[0]];
+console.log(something);
+
+const calAge = function (birthyear) {
+  return 2025 - birthyear;
+}
+const years = [2020, 2019, 2002];
+// console.log(calAge(years)); // NaN
+const age1 = calAge(years[0]);
+const age2 = calAge(years[1]);
+const age3 = calAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const allAge = [calAge(years[0]), calAge(years[1]), calAge(years[years.length - 1])];
+console.log(allAge);
+
+    // Quiz
+const populations = [300, 200, 600, 400];
+console.log(populations.length === 4);
+
+const percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])]
+function percentageOfWorld1(population) {
+  return population / 7900 * 100;
+}
+console.log(percentages);
+*/
+
+
