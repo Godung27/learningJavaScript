@@ -208,3 +208,54 @@ console.log(percentages);
 */
 
 
+/*
+                      // Basic Array Operations (Methods)
+// Add elements
+const friends = ["Godung", "Tom", "John", "Ron"];
+friends.push("Jack"); // Last
+console.log(friends);
+
+const newLength = friends.push("Bob");
+console.log(newLength);
+console.log(friends);
+
+friends.unshift("Sun"); // Beginning
+console.log(friends);
+
+// Remove elements
+friends.pop() // Last
+console.log(friends);
+
+const popped = friends.pop();
+console.log(popped);
+
+friends.shift(); // Beginning
+console.log(friends);
+
+// Index and Include
+console.log(friends.indexOf("Tom")); // Tom = 1
+console.log(friends.indexOf("Jack")); // Jack not in element = -1
+
+console.log(friends.includes("Tom")); // True or False (Boolean)
+console.log(friends.includes("Jack"));
+
+if (friends.includes("Tom")) {
+  console.log("You have friend name Tom");
+}
+
+    // Quiz
+const neighbours = ["Thailand", "Sweden", "China"];
+neighbours.push("Utopia");
+console.log(neighbours);
+
+if (!neighbours.includes("Germany")) {
+  console.log("Probably not a central european country :D");
+}
+neighbours[neighbours.indexOf("Sweden")] = "Republic to Sweden";
+console.log(neighbours);
+*/
+
+
+
+
+
