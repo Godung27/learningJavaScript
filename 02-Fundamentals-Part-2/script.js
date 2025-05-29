@@ -257,7 +257,7 @@ console.log(neighbours);
 
 
 /*
-        // CHALLENGE #2 
+        // CHALLENGE #2
 const calcTip = bills => bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2;
 
 const bills = [125, 555, 44];
@@ -301,3 +301,60 @@ const myCountry = {
 
 console.log(myCountry);
 */
+
+
+/*
+                      //  Dot vs. Bracket Notation
+const me = {
+  firstName: "Godung",
+  lastName: "Lim",
+  age: 2025 - 2002,
+  job: "student",
+  friends: ["Tim", "Alex", "Web"]
+};
+
+console.log(me);
+
+console.log(me.lastName);
+console.log(me["lastName"]); // can put any expreesion in []
+
+const nameKey = "Name";
+console.log(me["first" + nameKey]);
+console.log(me["last" + nameKey]);
+// console.log(me."first" + nameKey); // not working
+
+const interestIn = prompt("What do you want to know about me ? Choose between firstName, lastName, age, job, friends");
+
+if (me[interestIn]) {
+  console.log(me[interestIn]);
+} else {
+  console.log("Wrong request!");
+}
+
+me.location = "Bangkok";
+me["hobby"] = ["Game", "Climbing"];
+
+// Godung has 3 friends, and his best friend is Tim.
+console.log(`${me.firstName} has ${me.friends.length} friends, and his best friend is ${me.friends[0]}.`);
+
+    // Quiz
+// Thailand has 3 million thai-speaking people, 3 neighbouring countries and a capital called Bangkok
+
+const myCountry = {
+  country: "Thailand",
+  capital: "Bangkok",
+  language: "Thai",
+  population: 3,
+  neighbours: ["Republic to Sweden", "China", "Utopia"]
+};
+
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
+
+myCountry.population += 2;
+console.log(myCountry.population);
+
+myCountry['population'] -= 2;
+console.log(myCountry.population);
+*/
+
+
