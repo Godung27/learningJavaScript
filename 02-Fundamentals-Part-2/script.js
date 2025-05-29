@@ -267,5 +267,37 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(totals);
 */
 
+/*
+                      // Introduction to Objects
+// Array
+const meArray = [
+  "Godung",
+  "Lim",
+  2025 - 2002,
+  "student",
+  ["Tim", "Alex", "Web"]
+];
 
+// Object
+const meObject = {
+  firstName: "Godung",
+  lastName: "Lim",
+  age: 2025 - 2002,
+  job: "student",
+  friends: ["Tim", "Alex", "Web"]
+};
 
+console.log(meArray);
+console.log(meObject);
+
+// Quiz
+const myCountry = {
+  country: "Thailand",
+  capital: "Bangkok",
+  language: "Thai",
+  population: 3,
+  neighbours: ["Republic to Sweden", "China", "Utopia"]
+};
+
+console.log(myCountry);
+*/
