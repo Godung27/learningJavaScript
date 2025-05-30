@@ -118,7 +118,7 @@ function myKFC(chiken, potato) {
 }
 console.log(myKFC(7, 10));
 
-// Quiz
+    // Quiz
 function describePopulation(country, poppulation) {
   const popPer = percentageOfWorld1(poppulation);
   return `${country} has ${poppulation} million people, which is about ${popPer}% of the world`
@@ -290,7 +290,7 @@ const meObject = {
 console.log(meArray);
 console.log(meObject);
 
-// Quiz
+    // Quiz
 const myCountry = {
   country: "Thailand",
   capital: "Bangkok",
@@ -356,5 +356,77 @@ console.log(myCountry.population);
 myCountry['population'] -= 2;
 console.log(myCountry.population);
 */
+
+
+/*
+                      // Object Methods
+const me = {
+  firstName: "Godung",
+  lastName: "Lim",
+  birthyear: 2002,
+  job: "student",
+  friends: ["Tim", "Alex", "Web"],
+  hasDriverLicense: true,
+
+  // calAge: function (birthyear) {
+  //   return 2025 - birthyear;
+  // }
+
+  // calAge: function () {
+  //   return 2025 - this.birthyear;
+  // },
+
+  calAge: function () {
+    return this.age = 2025 - this.birthyear;
+  }
+};
+console.log(me.calAge(2002));
+console.log(me["calAge"](2002));
+
+console.log(me.calAge());
+console.log(me.age);
+
+    // Challenge
+// "Godung is a 23-year old student, and he has a/no driver's license"
+
+const me = {
+  firstName: "Godung",
+  lastName: "Lim",
+  birthyear: 2002,
+  job: "student",
+  friends: ["Tim", "Alex", "Web"],
+  hasDriverLicense: true,
+
+  calAge: function () {
+    return this.age = 2025 - this.birthyear;
+  },
+
+  getsummary: function () {
+    console.log(`${this.firstName} is a ${this.calAge()}-year old ${this.job}, and he has ${this.hasDriverLicense ? "a" : "no"} driver's license`)
+  }
+};
+
+console.log(me.getsummary());
+
+    // Quiz
+const myCountry = {
+  country: "Thailand",
+  capital: "Bangkok",
+  language: "Thai",
+  population: 3,
+  neighbours: ["Republic to Sweden", "China", "Utopia"],
+
+  describe: function () {
+    return `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+  },
+
+  checkIsland: function () {
+    return this.neighbours.length === 0 ? true : false;
+  }
+};
+console.log(myCountry.describe());
+console.log(myCountry.checkIsland());
+*/
+
 
 
