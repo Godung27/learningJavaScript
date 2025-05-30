@@ -383,7 +383,7 @@ const me = {
 console.log(me.calAge(2002));
 console.log(me["calAge"](2002));
 
-console.log(me.calAge());
+console.log(me.calAge()); // to create age (me.age)
 console.log(me.age);
 
     // Challenge
@@ -426,6 +426,39 @@ const myCountry = {
 };
 console.log(myCountry.describe());
 console.log(myCountry.checkIsland());
+*/
+
+
+/*
+        // CHALLENGE #3
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height)
+    return this.bmi;
+  }
+};
+
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height)
+    return this.bmi;
+  }
+};
+
+mark.calcBMI();
+john.calcBMI();
+
+if (mark.bmi > john.bmi) {
+  console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})!`);
+} else if (john.bmi > mark.bmi) {
+  console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})!`);
+}
 */
 
 
