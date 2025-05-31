@@ -462,4 +462,22 @@ if (mark.bmi > john.bmi) {
 */
 
 
+/*
+                      // Iteration: The for Loop
+console.log("Running 1 km");
+console.log("Running 2 km");
+console.log("Running 3 km");
+console.log("Running 4 km");
+console.log("Running 5 km");
+
+for (let run = 1; run <= 5; run++) {
+  console.log(`Running ${run} km`);
+}
+
+    // Quiz
+for (let numVote = 1; numVote <= 50; numVote++) {
+  console.log(`Voter number ${numVote} is currently voting`);
+}
+*/
+
 
