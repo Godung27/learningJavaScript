@@ -577,3 +577,39 @@ for (let i = 0; i < listOfNeighbours.length; i++) {
 */
 
 
+/*
+                      // The while Loop
+// for (let i = 1; i <= 3; i++) {
+//   console.log(i);
+// }
+
+let x = 1;
+while (x <= 3) {
+  console.log(x);
+  x++
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 1) {
+  console.log(`You rolled a ${dice}!`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice == 1) console.log("End...");
+}
+// While loop just need condition
+
+// Quiz
+const populations = [300, 200, 600, 400];
+function percentageOfWorld1(population) {
+  return population / 7900 * 100;
+}
+const percentages3 = [];
+let i = 0;
+while (i < populations.length) {
+  percentages3.push(percentageOfWorld1(populations[i]));
+  i++;
+}
+console.log(percentages3);
+*/
+
+
