@@ -535,7 +535,45 @@ const percentages2 = [];
 for (let i = 0; i < populations.length; i++) {
   percentages2.push(percentageOfWorld1(populations[i]));
 }
-console.log(percentages2); 
+console.log(percentages2);
+*/
+
+
+/*
+                      // Looping Backwards and Loops in Loops
+const me = [
+  "Godung",
+  "Lim",
+  2025 - 2002,
+  "student",
+  ["Tim", "Alex", "Web"]
+];
+
+for (let i = me.length - 1; i >= 0; i--) {
+  console.log(me[i]);
+}
+
+for (let exercise = 1; exercise <= 3; exercise++) {
+  console.log(`---- Exercise Set ${exercise}`);
+
+  for (let pushup = 1; pushup < 6; pushup++) {
+    console.log(`Excerise ${exercise}: Push up ${pushup}`);
+  }
+}
+
+    // Quiz
+const listOfNeighbours = [
+  ['Canada', 'Mexico'],
+  ['Spain'],
+  ['Norway', 'Sweden', 'Russia']
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+
+  for (let x = 0; x < listOfNeighbours[i].length; x++) {
+    console.log(`Neighbour: ${listOfNeighbours[i][x]}`);
+  }
+}
 */
 
 
