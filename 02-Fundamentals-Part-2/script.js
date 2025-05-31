@@ -481,3 +481,61 @@ for (let numVote = 1; numVote <= 50; numVote++) {
 */
 
 
+/*
+                      // Looping Arrays, Breaking and Continuing
+const me = [
+  "Godung",
+  "Lim",
+  2025 - 2002,
+  "student",
+  ["Tim", "Alex", "Web"]
+];
+const meType = [];
+
+for (let i = 0; i <= me.length - 1; i++) {
+  console.log(me[i], typeof me[i]);
+
+  // Filling type array
+  // meType[i] = typeof me[i];
+
+  meType.push(typeof me[i]);
+}
+console.log(meType);
+
+const years = [1998, 2002, 2010, 2022];
+const age = [];
+
+for (let i = 0; i < years.length; i++) {
+  age[i] = 2025 - years[i]
+}
+console.log(age);
+console.log("heyyyyyy")
+
+// Continuing
+for (let i = 0; i <= me.length - 1; i++) {
+  if (typeof me[i] === "string") continue; // Skip string
+
+  console.log(me[i], typeof me[i]);
+}
+
+// Breaking
+for (let i = 0; i <= me.length - 1; i++) {
+  if (typeof me[i] === "number") break; // Out of loop if find number
+
+  console.log(me[i], typeof me[i]);
+}
+
+    // Quiz
+const populations = [300, 200, 600, 400];
+function percentageOfWorld1(population) {
+  return population / 7900 * 100;
+}
+
+const percentages2 = [];
+for (let i = 0; i < populations.length; i++) {
+  percentages2.push(percentageOfWorld1(populations[i]));
+}
+console.log(percentages2); 
+*/
+
+
