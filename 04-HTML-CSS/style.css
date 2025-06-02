@@ -1,0 +1,19 @@
+body {
+  background-color: #fff685;
+  font-family: Arial;
+  font-size: 15px;
+}
+
+h1 {
+  color: darkslategrey;
+}
+
+.second { 
+  font-style: italic;
+  color: rgb(255, 0, 0);
+}
+
+#your-name {
+  background-color: burlywood;
+  border: 5px solid cornflowerblue;
+}
