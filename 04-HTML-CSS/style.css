@@ -1,19 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #fff685;
+  background-color: #f4ed8f;
   font-family: Arial;
   font-size: 15px;
+  margin: 35px;
 }
 
 h1 {
-  color: darkslategrey;
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+p {
+  margin: 10px;
 }
 
 .second { 
   font-style: italic;
-  color: rgb(255, 0, 0);
+  color: rgb(30, 0, 255);
+}
+
+#hello-world-image {
+  width: 400px;
+  margin-bottom: 20px;
 }
 
 #your-name {
   background-color: burlywood;
   border: 5px solid cornflowerblue;
+  width: 300px;
+  padding: 20px;
+}
+
+#your-name h3 {
+  text-align: unset;
+  margin-top: unset;
+}
+
+input, button {
+  text-align: center; 
+  padding: 10px;
+}
+
+a {
+  background-color: rgb(255, 249, 90);
 }
