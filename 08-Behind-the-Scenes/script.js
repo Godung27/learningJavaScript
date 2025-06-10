@@ -67,6 +67,49 @@ var potato = 5
 function deleteProduct() {
   console.log("All products delete!")
 }
+
+var x = 1;
+const y = 2;
+let z = 3;
+
+console.log(x === window.x); // true
+console.log(y === window.y); // false
+console.log(z === window.z); // false
+*/
+
+
+/*
+// The this Keyword in Practice 
+console.log(this); // Global object
+
+const calAge = function (birthYear) { // own this keyword
+  console.log(2025 - birthYear);
+  console.log(this); // undefined
+}
+calAge(1999);
+
+const calAgeArrow = (birthYear) => { // lexical this keyword (use keyword of parent function)
+  console.log(this); // Global object
+}
+calAgeArrow();
+
+const godung = {
+  year: 2002,
+  calAge: function () {
+    console.log(this); // year, calAge
+    console.log(2025 - this.year);
+  }
+}
+godung.calAge();
+
+const tom = {
+  year: 2020
+}
+tom.calAge = godung.calAge;
+tom.calAge(); // this = year: 2020, calAge
+
+const f = godung.calAge;
+f(); // undefined (this.year = undefined)
 */
 
 
