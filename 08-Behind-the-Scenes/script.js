@@ -163,3 +163,53 @@ funArrow(1, 3, 5)
 */
 
 
+/*
+                      // Object References in Practice (Shallow vs. Deep Copies)
+const rose1 = {
+  firstName: "Rose",
+  lastName: "Kate"
+};
+
+const marriedRose = rose1; // not create new object in heap, use same reference as rose1
+marriedRose.lastName = "Dave";
+
+console.log(rose1); // lastName = Dave (same object in heap)
+console.log(marriedRose); // lastName = Dave
+
+function marriedPerson(orignalPerson, newLastName) {
+  orignalPerson.lastName = newLastName;
+  return orignalPerson;
+}
+const newMarriedRose = marriedPerson(rose1, "Dave");
+
+console.log(rose1); // lastName = Dave (same object in heap)
+console.log(newMarriedRose); // lastName = Dave
+
+const rose = {
+  firstName: "Rose",
+  lastName: "Kate",
+  family: ["Tom", "Tim"]
+};
+
+  // Sahallow copy
+const roseCopy = { ...rose }; // spread (still have problem)
+roseCopy.lastName = "Dave";
+
+roseCopy.family.push("Billy");
+roseCopy.family.push("Alex");
+
+console.log(rose); // lastName = Kate, family [Tom, Tim, Billy, Alex] (problem!)
+console.log(roseCopy); // lastName = Dave, family [Tom, Tim, Billy, Alex]
+
+  // 👍👍👍 Deep clone/copy 👍👍👍
+const roseClone = structuredClone(rose);
+roseClone.lastName = "Dave"
+roseClone.family.push("Nick");
+roseClone.family.push("Mike");
+
+console.log("Original:", rose); // lastName = Kate, Family = [Tom, Tim]
+console.log("Clone:", roseClone); // lastName = Dave, [Tom, Tim, Nick, Mike]
+*/
+
+
+
