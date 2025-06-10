@@ -79,7 +79,7 @@ console.log(z === window.z); // false
 
 
 /*
-// The this Keyword in Practice 
+// The this Keyword in Practice
 console.log(this); // Global object
 
 const calAge = function (birthYear) { // own this keyword
@@ -110,6 +110,56 @@ tom.calAge(); // this = year: 2020, calAge
 
 const f = godung.calAge;
 f(); // undefined (this.year = undefined)
+*/
+
+
+/*
+                      // Regular Functions vs. Arrow Functions
+const godung = {
+  firstName: "Godung",
+  year: 2002,
+  calAge: function () {
+    console.log(this);
+    console.log(2020 - this.year);
+
+        // Solution #1
+    // const self = this; // self || that
+    // const young = function () {
+    //   console.log(self);
+    //   console.log(self.year < 18);
+    //   // console.log(this.year < 18); // undefined
+    // }
+
+        //  Solution #2 (Arrow function)
+    const young = () => {
+      console.log(this);
+      console.log(this.year < 18);
+    }
+
+    young();
+  },
+
+  hello: () => { // Arrow function
+    console.log(this) // undefined
+    console.log(`Hello ${this.firstName}`); // Hello undefined
+  }
+}
+godung.calAge();
+godung.hello();
+
+// Arguments keyword
+const funExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+}
+funExpr(3, 5);
+funExpr(3, 5, 7, 8);
+
+var funArrow = (a, b) => {
+  console.log(arguments); // undefined
+  return a + b;
+}
+funArrow(1, 3, 5)
 */
 
 
