@@ -122,7 +122,7 @@ const godung = {
     console.log(this);
     console.log(2020 - this.year);
 
-        // Solution #1
+      // Solution #1
     // const self = this; // self || that
     // const young = function () {
     //   console.log(self);
@@ -130,7 +130,7 @@ const godung = {
     //   // console.log(this.year < 18); // undefined
     // }
 
-        //  Solution #2 (Arrow function)
+      //  Solution #2 (Arrow function)
     const young = () => {
       console.log(this);
       console.log(this.year < 18);
@@ -140,14 +140,14 @@ const godung = {
   },
 
   hello: () => { // Arrow function
-    console.log(this) // undefined
+    console.log(this) // Global
     console.log(`Hello ${this.firstName}`); // Hello undefined
   }
 }
 godung.calAge();
 godung.hello();
 
-// Arguments keyword
+  // Arguments keyword
 const funExpr = function (a, b) {
   console.log(arguments);
   return a + b;
