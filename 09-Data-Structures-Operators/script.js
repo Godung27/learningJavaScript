@@ -7,10 +7,6 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
-
   openingHours: {
     thu: {
       open: 12,
@@ -25,10 +21,19 @@ const restaurant = {
       close: 24,
     },
   },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderDelivery: function ({ time = "20:00", starterIndex = 1, mainIndex = 0 }) {
+    console.log(`At ${time}, order received ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`);
+  }
 };
 
+
 /*
-// Destructuring Arrays
+                      // Destructuring Arrays
 const arr = [2, 3, 4];
 const a = arr[0];
 const b = arr[1];
@@ -66,14 +71,47 @@ console.log(i, j, k);
 // console.log(q, r, s); // 8, 9 ,1
 const [q = 1, r = 1, s = 1] = [8];
 console.log(q, r, s); // 8, 1, 1
+*/
 
-    // Quiz
-const [firstBook, secondBook] = books;
-const [, , thirdBook] = books;
-const ratings = [['rating', 4.19], ['ratingsCount', 144584]];
-const [[, rating], [, ratingsCount]] = ratings;
-const ratingStars = [63405, 1808];
-const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
+
+/*
+                      // Destructuring Objects
+restaurant.orderDelivery({ // At 11:30, order received Garlic Bread and Risotto
+  time: "11:30",
+  starterIndex: 2,
+  mainIndex: 2
+});
+
+restaurant.orderDelivery({ // At 20:00, order received Caprese Salad and Pizza
+  starterIndex: 3
+})
+
+const { name, categories, openingHours } = restaurant;
+console.log(name, categories, openingHours);
+
+const {
+  name: restaurantName,
+  categories: task,
+  openingHours: hours
+} = restaurant;
+console.log(restaurantName, task, hours);
+
+  // Default values
+const { menu = [], starterMenu: starter = [] } = restaurant;
+console.log(menu, starter);
+
+  // Mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 20, b: 7, c: 0 };
+console.log(obj);
+
+({ a, b } = obj);
+console.log(a, b);
+
+  // Nested objects
+const { fri: { open: o, close: c } } = openingHours;
+console.log(o, c)
 */
 
 
