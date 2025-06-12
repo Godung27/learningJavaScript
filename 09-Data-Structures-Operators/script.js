@@ -217,6 +217,37 @@ restaurant.orderPizza("tomato", "mushroom", "cheese")
 */
 
 
+/*
+                      // Short Circuiting (&& and ||)
+  // OR \\ (first True)
+console.log(0 || "Godung"); // Godung
+console.log(27 || null); // 27
+console.log(" " || undefined); // undefined (No true then last false)
+
+console.log(0 || 27 || "Godung" || undefined) // 27
+
+restaurant.numGuests = 0;
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 20;
+console.log(guest1); // 20
+
+restaurant.numGuests = 5;
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2); // 5
+
+  // AND && (first False)
+console.log(0 && "Godung"); // 0
+console.log(27 && "Hello"); // Hello
+
+    // Example
+if (restaurant.orderPizza) { 
+  restaurant.orderPizza("Pork", "Cheese");
+}
+
+restaurant.orderPasta && restaurant.orderPasta("Mushroom", "Chiken", "Pepper");
+*/
+
+
+
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
