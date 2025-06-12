@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const restaurant = {
   name: 'Classico Italiano',
@@ -289,6 +289,7 @@ res2.owner ??= "ME"; // res2.owner = res2.owner ?? "ME"
 console.log(res1);
 console.log(res2);
 */
+
 
 
 const flights =
