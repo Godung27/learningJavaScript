@@ -261,7 +261,35 @@ console.log(unGuest); // 10
 */
 
 
-// Logical Assignment Operators
+/*
+                      // Logical Assignment Operators
+const res1 = {
+  guest: 10,
+  name: "Ca-pone Pizza",
+  owner: "Godung",
+};
+const res2 = {
+  guest: 0,
+  name: undefined,
+  owner: " ",
+};
+
+  // AND assignment operator
+res1.guest &&= 5; // res1.guest = res1.guest && 5
+res2.guest &&= 5; // res2.guest = res2.guest && 5
+
+  // OR assignment operator
+res1.name ||= "<ANONYMOUS>"; // res1.name = res1.name || "<ANONYMOUS>"
+res2.name ||= "<ANONYMOUS>"; // res2.name = res2.name || "<ANONYMOUS>"
+
+  // Nullish assignment operator
+res1.owner ??= "ME"; // res1.owner = res1.owner ?? "ME"
+res2.owner ??= "ME"; // res2.owner = res2.owner ?? "ME"
+
+console.log(res1);
+console.log(res2);
+*/
+
 
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';

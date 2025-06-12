@@ -276,3 +276,16 @@ for (let i = 0; i < books.length; i++) {
   books[i].onlineContent ?? console.log(`"${books[i].title}" provides no data about its online content`);
 }
 */
+
+/*
+    // Logical Assignment Operators
+// 7.1
+for (let i = 0; i < books.length; i++) {
+  books[i].edition ||= 1;
+}
+// 7.2
+for (let i = 0; i < books.length; i++) {
+  books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2)
+}
+*/
+
