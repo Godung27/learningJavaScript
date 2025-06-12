@@ -35,7 +35,14 @@ const restaurant = {
   // The Spread Operator (...)
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
+  },
+
+  // Rest Pattern and Parameters
+  orderPizza: function (mainIngredient, ...otherIng) {
+    console.log(mainIngredient);
+    console.log(otherIng);
   }
+
 };
 
 
@@ -171,6 +178,43 @@ console.log(restaurant.name);
 console.log(restaurantCopy.name);
 */
 
+
+/*
+                      // Rest Pattern and Parameters
+    // 1) Destructuring
+  // Spread, becuase on RIGHT side of =
+const arr = [1, 2, ...[3, 4]];
+
+  // Spread, becuase on LEFT side of =
+const [a, b, ...other] = [1, 2, 3, 4];
+console.log(a, b, other); // 1, 2, [3, 4]
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu
+];
+console.log(pizza, risotto, otherFood)
+
+  //  Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+    // 2) Functions
+const add = function (...number) {
+  let sum = 0;
+  for (let i = 0; i < number.length; i++) {
+    sum += number[i];
+  }
+  console.log(sum);
+}
+add(2, 3);
+add(7, 8, 9);
+
+const x = [20, 30];
+add(...x);
+
+restaurant.orderPizza("tomato", "mushroom", "cheese")
+*/
 
 
 const flights =
