@@ -22,12 +22,19 @@ const restaurant = {
     },
   },
 
+  // Destructuring Arrays
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
+  // Destructuring Objects
   orderDelivery: function ({ time = "20:00", starterIndex = 1, mainIndex = 0 }) {
     console.log(`At ${time}, order received ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`);
+  },
+
+  // The Spread Operator (...)
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
   }
 };
 
@@ -113,6 +120,57 @@ console.log(a, b);
 const { fri: { open: o, close: c } } = openingHours;
 console.log(o, c)
 */
+
+
+/*
+                      // The Spread Operator (...)
+const arr = [2, 4, 9];
+const arrBadCopy = [arr[0], arr[1], arr[2]]; // 2, 4, 9
+const arrCopy = [...arr]; // 2, 4, 9
+const arrNew = [1, ...arr, 10]; // 1, 2, 4, 9, 10
+console.log(`
+  arr: ${arr},
+  arrBadCopy: ${arrBadCopy},
+  arrCopy: ${arrCopy},
+  arrNew: ${arrNew}`
+)
+
+const newMenu = [...restaurant.mainMenu, "Sandwich"];
+console.log(newMenu);
+
+  // Copy
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
+  // Merge arrays
+const allMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(allMenu);
+
+// Iterable: arrays, strings, maps, sets (Not object)
+const str = "Godung" // G o d u n g
+const letter = [...str, , , 27]; // G o d u n g, , 27
+console.log(...str);
+console.log(letter);
+// console.log(`${...str}`); // Unexpected ...
+
+const ingredients = [
+  prompt("Let's make pasta! ingredient 1?"),
+  prompt("ingredient 2?"),
+  prompt("ingredient 3?")
+];
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPasta(...ingredients);
+
+  // Object
+const newRestaurant = { Owner: "Godung", ...restaurant, OwnerIn: 2002 };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = structuredClone("Rolina Goco");
+console.log(restaurant.name);
+console.log(restaurantCopy.name);
+*/
+
 
 
 const flights =
