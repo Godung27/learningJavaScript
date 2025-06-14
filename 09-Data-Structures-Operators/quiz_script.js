@@ -291,3 +291,29 @@ for (let i = 0; i < books.length; i++) {
 }
 */
 
+/*
+    // Looping Arrays: The for-of Loop
+// 8.1
+let pageSum = 0;
+for (const page of books) {
+  pageSum += page.pages
+}
+console.log(pageSum);
+// 8.2
+const allAuthors = [];
+for (const book of books) {
+  if (typeof book.author === 'string') {
+    allAuthors.push(book.author)
+  } else {
+    for (const author of book.author) {
+      allAuthors.push(author);
+    }
+  }
+}
+console.log(allAuthors);
+// 8.3
+for (const [i, authors] of allAuthors.entries()) {
+  console.log(`${i + 1}: ${authors}`)
+}
+*/
+
