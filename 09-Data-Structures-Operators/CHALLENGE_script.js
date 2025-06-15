@@ -1,7 +1,7 @@
 'use strict';
 
 // CHALLENGE #1
-/* 
+/*
 We're building a football betting app (soccer for my American friends 😅)!
 
 Suppose we get data from a web service about a certain game (below). In this challenge we're gonna work with the data. So here are your tasks:
@@ -96,7 +96,6 @@ team2 < team1 && console.log("team2 WIN");
 
 
 // CHALLENGE #2
-
 /* 
 Let's continue with our football betting app!
 
@@ -118,6 +117,7 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 GOOD LUCK 😀
 */
 
+/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -158,3 +158,31 @@ const game = {
     team2: 6.5,
   },
 };
+
+// 2.1 
+for (const [goal, name] of game.scored.entries()) {
+  console.log(`Goal ${goal + 1}: ${name}`);
+}
+
+// 2.2 
+let avgOdds = 0;
+for (const odds of Object.values(game.odds)) {
+  avgOdds += odds;
+}
+avgOdds /= Object.values(game.odds).length;
+console.log(avgOdds);
+
+// 2.3
+for (const [team, odd] of Object.entries(game.odds)) {
+  const strTeam = team === "x" ? "draw" : `Odd of victory ${game[team]}`;
+  console.log(`${strTeam}: ${odd}`);
+}
+
+// BONUS
+const scorers = {};
+for (const player of game.scored) {
+  scorers[player] ? scorers[player]++ : scorers[player] = 1; // 0 = false
+}
+console.log(scorers);
+*/
+
