@@ -341,4 +341,20 @@ const newBook2 = {
 console.log(newBook2);
 */
 
+/*
+// Optional Chaining (?.)
+// 10.1
+const getFirstKeyword = function (book) {
+  console.log(book.keywords?.[0]);
+}
+const newBook2 = {
+  title: 'The C Programming Language',
+  author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+}
+// Example 1
+getFirstKeyword(books[0]);
+// Example 2
+getFirstKeyword(newBook2); // from previous tasks
+*/
+
 

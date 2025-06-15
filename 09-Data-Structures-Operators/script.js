@@ -308,7 +308,7 @@ for (const [i, el] of menu.entries()) {
 
 /*
                       // Enhanced Object Literals
-const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 const openingHours = {
   // ES6
   [weekdays[3]]: {
@@ -349,6 +349,33 @@ const restaurantES6 = {
 console.log(restaurantES6);
 */
 
+/*
+                      // Optional Chaining (?.)
+if (restaurant.openingHours && restaurant.openingHours.mon) {
+  console.log(restaurant.openingHours.mon);
+}
+// console.log(restaurant.openingHours.mon); // undefiend
+// console.log(restaurant.openingHours.mon.open); // error
+
+  // with Optional Chaining
+console.log(restaurant.openingHours?.mon); // undefiend
+console.log(restaurant.openingHours.mon?.open); // undefiend
+
+    // Example
+const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+for (const day of weekdays) {
+  const open = restaurant.openingHours[day]?.open ?? "closed";
+  console.log(`On ${day} we open at ${open}`);
+}
+
+  // Methods
+console.log(restaurant.order?.(0, 1) ?? "Method dose not exist.")
+console.log(restaurant.orderRisotto?.(0, 1) ?? "Method dose not exist.") // Method dose not exist.
+
+  // Array
+const user = [{ name: "Godung", Job: "Student" }];
+console.log(user[0]?.name ?? "Unknow")
+*/
 
 
 const flights =
