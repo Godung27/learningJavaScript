@@ -408,6 +408,48 @@ for (const [key, { open, close }] of entries) {
 */
 
 
+/*
+                      // Sets
+const orderSet = new Set([
+  "Pizza",
+  "Pizza",
+  "Pasta",
+  "Risotto",
+  "Pizza",
+  "Pasta"
+]);
+console.log(orderSet) // {'Pizza', 'Pasta', 'Risotto'}
+console.log(new Set("Godung")); // {'G', 'o', 'd', 'u', 'n', 'g'}
+  // check
+console.log(orderSet.size) // 3 (length) 
+console.log(orderSet.has("Pizza")); // true
+console.log(orderSet.has("Cookie")); // false
+  // add
+orderSet.add("Sandwich");
+orderSet.add("Sandwich");
+console.log(orderSet); // {'Pizza', 'Pasta', 'Risotto', 'Sandwich'}
+  // delete
+orderSet.delete("Risotto");
+console.log(orderSet); // {'Pizza', 'Pasta', 'Sandwich'}
+  // clear (delete all)
+// orderSet.clear();
+// console.log(orderSet); // {}
+
+for (const set of orderSet) {
+  console.log(set);
+}
+
+    // Example
+const staff = ["waiter", "chef", "manager", "waiter", "chef", "waiter"];
+const uniquePosition = [...new Set(staff)]; // turn to Array
+console.log(uniquePosition); // ['waiter', 'chef', 'manager']
+console.log(new Set(staff).size) // 3
+console.log(new Set("Parnuvich").size) // 9
+*/
+
+
+
+
 
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';

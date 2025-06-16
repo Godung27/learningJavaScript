@@ -342,7 +342,7 @@ console.log(newBook2);
 */
 
 /*
-// Optional Chaining (?.)
+    // Optional Chaining (?.)
 // 10.1
 const getFirstKeyword = function (book) {
   console.log(book.keywords?.[0]);
@@ -358,16 +358,16 @@ getFirstKeyword(newBook2); // from previous tasks
 */
 
 /*
-// Looping Objects: Object Keys, Values, and Entries
+    // Looping Objects: Object Keys, Values, and Entries
 // 11.1
 const entries = [];
 for (const key of Object.keys(books[0].thirdParty.goodreads)) {
-  entries.push(key);
+  entries.push([key]);
 }
 console.log(entries)
 // 11.2
 for (const [index, value] of Object.values(books[0].thirdParty.goodreads).entries()) {
-  entries[index] = [index, value];
+  entries[index].push(value);
 }
 // 11.3
 const entries2 = Object.entries(books[0].thirdParty.goodreads);
@@ -375,4 +375,31 @@ const entries2 = Object.entries(books[0].thirdParty.goodreads);
 console.log(entries);
 console.log(entries2);
 */
+
+/*
+    // Sets 
+// 12.1
+const allKeywords = [];
+for (const book of books) {
+  allKeywords.push(...book.keywords);
+}
+console.log(allKeywords);
+// 12.2
+const uniqueKeywords = new Set(allKeywords);
+console.log(uniqueKeywords);
+// 12.3
+uniqueKeywords.add("coding");
+uniqueKeywords.add("science");
+console.log(uniqueKeywords);
+// 12.4
+uniqueKeywords.delete("business");
+console.log(uniqueKeywords);
+// 12.5
+const uniqueKeywordsArr = [...uniqueKeywords];
+console.log(uniqueKeywordsArr);
+// 12.6
+uniqueKeywords.clear()
+console.log(uniqueKeywords);
+*/
+
 
