@@ -448,12 +448,8 @@ console.log(new Set("Parnuvich").size) // 9
 */
 
 
-
-
-
-const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
-
+/*
+                      // New Operations to Make Sets Useful!
 const italianFoods = new Set([
   'pasta',
   'gnocchi',
@@ -472,3 +468,28 @@ const mexicanFoods = new Set([
   'garlic',
 ]);
 
+const interFood = italianFoods.intersection(mexicanFoods);
+console.log("intersec:", interFood); // (duplicate) {'tomatoes', 'garlic'}
+
+const unionFood = italianFoods.union(mexicanFoods);
+console.log("Union:", unionFood); // (all, expect duplicate) {'pasta', 'gnocchi', 'tomatoes', 'olive oil', 'garlic', 'basil', 'tortillas', 'beans', 'rice', 'avocado'}
+console.log(new Set([...italianFoods, ...mexicanFoods])); // same as union
+
+const uniqueItalian = italianFoods.difference(mexicanFoods);
+console.log(uniqueItalian); // (all italian, expect duplicate) {'pasta', 'gnocchi', 'olive oil', 'basil'}
+
+const uniqueMaxican = mexicanFoods.difference(italianFoods);
+console.log(uniqueMaxican); // (all maxican, expect duplicate) {'tortillas', 'beans', 'rice', 'avocado'}
+
+const uniqueItalianMaxican = italianFoods.symmetricDifference(mexicanFoods);
+console.log(uniqueItalianMaxican); // (all italian and maxican, expect duplicant) {'pasta', 'gnocchi', 'olive oil', 'basil', 'tortillas', 'beans', 'rice', 'avocado'}
+
+console.log(italianFoods.isDisjointFrom(mexicanFoods)); // false 
+*/
+
+
+
+
+
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
