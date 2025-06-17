@@ -488,7 +488,37 @@ console.log(italianFoods.isDisjointFrom(mexicanFoods)); // false
 */
 
 
+/*
+                      // Maps: Fundamentals
+const restMap = new Map();
+restMap.set("name", "GODUNG"); // (key, value)
+restMap.set(1, "Alax, Roberto");
+restMap.set(2, "Pasto");
+console.log(restMap); // {'name' => 'GODUNG', 1 => 'Alax, Roberto', 2 => 'Pasto'}
+console.log(restMap.get(2)) // Pasto
 
+  // Can set key as Array and Boolean
+restMap
+  .set([1, 2], "Rota") // array
+  .set("open", 12)
+  .set("closed", 23)
+  .set(true, "we are open :)") // boolean
+  .set(false, "we are closed :(");
+
+console.log(restMap.get(true)); // we are open :)
+
+    // Example
+const timeNow = 24;
+console.log(restMap.get(timeNow > restMap.get("open") && timeNow < restMap.get("closed"))); // we are closed :(
+
+  // check
+console.log(restMap.has("Food")) // check key
+  // delete
+restMap.delete(2); // remove (2, "Pasto")
+// restMap.clear(); // {}
+  // size
+console.log(restMap.size); // 7
+*/
 
 
 const flights =
