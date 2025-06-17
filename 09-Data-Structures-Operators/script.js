@@ -521,5 +521,42 @@ console.log(restMap.size); // 7
 */
 
 
+/*
+                      // Maps: Iteration
+const question = new Map([
+  ["askQuestion", "What is my favorite hobby ?"],
+  [1, "Climbing"],
+  [2, "Play game"],
+  [3, "Listen music"],
+  ["correct", 2],
+  [true, "Correct 👍"],
+  [false, "Try Again 🧐"],
+]);
+console.log(question);
+
+  // Convert Object to Map
+console.log(Object.entries(openingHours));
+const mapQH = new Map(Object.entries(openingHours));
+console.log(mapQH);
+
+    // Quiz app
+console.log(question.get("askQuestion"));
+for (const [key, value] of question) {
+  if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
+}
+const answer = Number(prompt("Your answer"));
+console.log(answer);
+console.log(question.get(question.get("correct") === answer));
+
+  // Convert Map to Array
+console.log([...question]);
+console.log([...question.entries()]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
+*/
+
+
+
+
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
