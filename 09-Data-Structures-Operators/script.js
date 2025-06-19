@@ -604,5 +604,68 @@ console.log(typeof new String("Godung").slice(0)); // String
 */
 
 
+/*
+                      // Working with Strings - Part 2
+const airline = "Asia Airline Thailand";
+console.log(airline.toLowerCase()); // asia airline thailand
+console.log(airline.toUpperCase()); // ASIA AIRLINE THAILAND
+console.log("Godung".toUpperCase()); // GODUNG
+
+  // Fix capitalization in name
+const passenger = "GOdUng"; // Godung
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+  // Comparing email
+const email = "godung@gmail.com";
+const loginEmail = " GoDUNg@GMAIl.CoM \n";
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+console.log(normalizedEmail === email); // true
+
+  // Replacing
+const pound = "312,75£"
+const baht = pound.replace("£", "฿").replace(",", ".");
+console.log(baht); // 312.75฿
+
+const announcment = "All passengers come to boarding door 27. Boarding door 27!";
+console.log(announcment.replace("door", "gate")); // change only first door word (... gate 27... door 27)
+console.log(announcment.replace(/door/g, "gate")) // change all
+console.log(announcment.replaceAll("door", "gate")); // change all (new)
+
+  // Booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing')); // check entire word
+console.log(plane.startsWith('Airb'));  // check start word
+console.log(plane.endsWith('neo'));  // check end word
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the NEW Airbus family');
+}
+
+    // Practice exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+
+  if (baggage.includes("knife") || baggage.includes("gun")) {
+    console.log("You are NOT allowed on board");
+  } else {
+    console.log("Welcome aboard !");
+  }
+};
+checkBaggage("I have a laptop, some Food and a pocket KnIFe"); // You are NOT allowed on board
+checkBaggage("Socks and camera"); // Welcome aboard !
+checkBaggage("Got some snacks and a guN for protection"); // You are NOT allowed on board
+*/
+
+
+
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';

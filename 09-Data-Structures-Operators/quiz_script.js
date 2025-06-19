@@ -447,3 +447,42 @@ isContributor('Julie Sussman (Contributor)'); // true
 isContributor('Robert Sedgewick'); // false
 */
 
+/*
+// Working with Strings - Part 2
+// 16.1
+const normalizeAuthorName = function (author) {
+  author = author.trim();
+  const firstName = author.slice(0, author.indexOf(' '));
+
+  let lastName = '';
+  if (author.indexOf(' ') === author.lastIndexOf(' ')) {
+    lastName = author.slice(author.indexOf(' ') + 1, author.length);
+  } else {
+    lastName = author.slice(author.indexOf(' ') + 1, author.lastIndexOf(' '));
+  }
+
+  const capitalizedFirstName = firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
+  const capitalizedLastName = lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
+
+  console.log(`${capitalizedFirstName} ${capitalizedLastName}`);
+}
+
+normalizeAuthorName('  JuliE sussMan (Contributor)');
+// 16.2
+const newBookTitle = books[1].title.replace("Programs", "Software");
+console.log(newBookTitle);
+// 16.3
+const logBookTheme = function (title) {
+  const t = title.toLowerCase();
+
+  if (t.startsWith("computer")) {
+    console.log("This book is about computers");
+  } else if (t.include("algorithms") && t.include("structures")) {
+    console.log("This book is about algorithms and data structures");
+  } else if (t.endsWith("system") || t.endsWith("systems") && !t.include("operating")) {
+    console.log("This book is about some systems, but definitely not about operating systems");
+  }
+}
+*/
+
+
