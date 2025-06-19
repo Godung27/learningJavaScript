@@ -556,6 +556,52 @@ console.log([...question.values()]);
 */
 
 
+/*
+                      // Working With Strings - Part 1
+const airline = "Asia Airline";
+const plane = "B739";
+
+console.log(plane[0]); // B
+console.log(plane[1]); // 7
+console.log("A437"[0]); // A
+
+console.log(airline.length); // 12
+
+  // find word (index)
+console.log(airline.indexOf("i")); // 2 (first "i")
+console.log(airline.lastIndexOf("i")); // 9 (last "i")
+console.log(airline.indexOf("Airline")) // 5
+console.log(airline.indexOf("airline")) // -1 (can't find)
+
+  // slice
+console.log(airline.slice(0)); // Asia Airline (start form index 0)
+console.log(airline.slice(0, 4)); // Asia (start, end)
+console.log(airline.slice(-2)); // ne (-1 start form last index)
+
+console.log(airline.slice(0, airline.indexOf(" "))); // Asia
+console.log(airline.slice(airline.lastIndexOf(" "))); // (space)Airline
+console.log(airline.slice(airline.lastIndexOf(" ") + 1)); // Airline
+
+    // Example
+const checkMiddleSeat = function (seat) {
+  //  B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === "B" || s === "E") {
+    console.log("You got the middle seat 🥲");
+  } else {
+    console.log("You got lucky 😎");
+  }
+}
+
+checkMiddleSeat("11E"); // You got the middle seat 🥲
+checkMiddleSeat("3B"); // You got the middle seat 🥲
+checkMiddleSeat("23I"); // You got lucky 😎
+
+  // Javascript behind the scenes
+console.log(new String("Godung")); // String {'Godung'}
+console.log(typeof new String("Godung")); // Object
+console.log(typeof new String("Godung").slice(0)); // String
+*/
 
 
 const flights =

@@ -403,7 +403,7 @@ console.log(uniqueKeywords);
 */
 
 /*
-// Maps: Fundamentals
+    // Maps: Fundamentals
 // 13.1
 const bookMap = new Map();
 bookMap.set([['title', 'Clean Code'], ['author', 'Robert C. Martin']]);
@@ -418,12 +418,32 @@ if (bookMap.has("author")) console.log("The author of the book is known");
 */
 
 /*
-// Maps: Iteration
+    // Maps: Iteration
 // 14.1
 const firstBookMap = new Map(Object.entries(books[0]));
 // 14.2
 for (const [key, value] of firstBookMap) {
   if (typeof value === "number") console.log(key);
 }
+*/
+
+/*
+    // Working With Strings - Part 1
+// 15.1
+console.log(books[0].ISBN['6'], books[0].ISBN['4'], books[0].ISBN['9'], books[0].ISBN[8]);
+// 15.2
+const quote = 'A computer once beat me at chess, but it was no match for me at kick boxing';
+console.log(quote.indexOf("chess")); // 27
+// 15.3
+console.log(quote.slice(quote.lastIndexOf(" ") + 1)); // boxing
+// 15.4
+const isContributor = function (author) {
+  const a = author.slice(author.lastIndexOf(" ") + 1);
+  console.log(a === "(Contributor)");
+}
+// Example 1
+isContributor('Julie Sussman (Contributor)'); // true
+// Example 2
+isContributor('Robert Sedgewick'); // false
 */
 
