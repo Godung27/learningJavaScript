@@ -666,6 +666,61 @@ checkBaggage("Got some snacks and a guN for protection"); // You are NOT allowed
 */
 
 
+/*
+                      // Working with Strings - Part 3
+  // Split
+console.log("This+is+Split".split("+")); // ['This', 'is', 'Split']
+
+const [firstName, lastName] = "Godung Limtong".split(" ");
+console.log(firstName); // Godung
+console.log(lastName); // Limtong
+
+  // Join
+const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+console.log(newName); // Mr. Godung LIMTONG
+
+  // Split and Join
+const capitalizationName = function (name) {
+  const n = name.split(" ");
+  const nameCorrect = []
+  for (const names of n) {
+    // nameCorrect.push(names[0].toUpperCase() + names.slice(1));
+    nameCorrect.push(names.replace(names[0], names[0].toUpperCase()))
+  }
+  console.log(nameCorrect.join(" "));
+}
+capitalizationName("godung limtong");
+capitalizationName("smith jack mann");
+
+  // Padding
+const message = "Hello everyone";
+console.log(message.padStart(20, "+").padEnd(25, "/")); // message.length = 14
+// ++++++Hello everyone/////
+console.log("Godung".padStart(20, "+").padEnd(25, "/"));
+// ++++++++++++++Godung/////
+
+const maskCreditCard = function (number) {
+  // const str = String(number); // string
+  const str = number + "";
+  const last = str.slice(-4);
+  console.log(last.padStart(str.length, "*"));
+
+}
+maskCreditCard(3892772); // ***2772
+maskCreditCard(399384024898); // ********4898
+maskCreditCard("81298320832222"); // **********2222
+
+  // Repeat
+const alert = `---Security Alert--- `;
+console.log(alert.repeat(5));
+
+const planesInLine = function (n) {
+  console.log(`There are ${n} planes in line ${"✈️".repeat(n)}`);
+}
+planesInLine(4); // There are 4 planes in line ✈️✈️✈️✈️
+planesInLine(7)
+*/
+
 
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
