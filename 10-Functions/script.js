@@ -94,7 +94,7 @@ document.body.addEventListener("click", run);
 
 
 /*
-// Functions Returning Functions
+                      // Functions Returning Functions
 const greet = function (greeting) {
   return function (name) {
     console.log(`${greeting} ${name}`);
@@ -105,13 +105,13 @@ greetHi("Godung"); // Hi Godung
 
 greet("Hello")("Smith") // Hello Smith
 
-// Challenge
-// By myself
+    // Challenge
+  // By myself
 const greetArr = greeting => function (name) {
   console.log(`${greeting} ${name}`);
 }
 greetArr("Hi")("Mark"); // Hi Mark
-// Another way
+  // Another way
 const greetArr2 = greeting => name => console.log(`${greeting} ${name}`);
 greetArr2("Hi")("Mark"); // Hi Mark
 */
@@ -166,3 +166,66 @@ book.call(tigerStar, ...flightBooking) // same
 */
 
 
+/*
+                      // The bind Method
+const eagle = {
+  airline: "Eagle Airline",
+  iataCode: "EA",
+  booking: [],
+  // book: function () {},
+  book(flightNum, name) {
+    console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`);
+
+    this.booking.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+}
+const flyHigh = {
+  airline: "Fly High",
+  iataCode: "FH",
+  booking: [],
+};
+const tigerStar = {
+  airline: "Tiger Star",
+  iataCode: "TS",
+  booking: [],
+};
+const book = eagle.book;
+
+  // Bind method
+const bookEA = book.bind(eagle);
+const bookFY = book.bind(flyHigh);
+const bookTS = book.bind(tigerStar);
+
+bookEA(5, "Hummel"); // Hummel booked a seat on Eagle Airline flight EA5
+
+const bookTS99 = book.bind(tigerStar, 99); // similar like default value
+bookTS99("Ham"); // Ham booked a seat on Tiger Star flight TS99
+
+  // With Event Listener
+eagle.plane = 100;
+eagle.buyPlane = function () {
+  console.log(this);
+  this.plane++;
+
+  console.log(this.plane);
+}
+document.querySelector(".buy").addEventListener("click", eagle.buyPlane.bind(eagle)); // define "this" keyword to eagle
+
+  // Partial application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVat = addTax.bind(null, 0.7); // similar like default value
+// addVat = value => value + value * 0.7
+
+    // Challenge
+const addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  }
+}
+const addVat7 = addTaxRate(0.7);
+
+console.log(addTaxRate(0.1)(200));
+console.log(addVat7(200));
+*/
