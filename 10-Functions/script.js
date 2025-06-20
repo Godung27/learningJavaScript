@@ -93,3 +93,27 @@ document.body.addEventListener("click", run);
 */
 
 
+/*
+// Functions Returning Functions
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  }
+}
+const greetHi = greet("Hi");
+greetHi("Godung"); // Hi Godung
+
+greet("Hello")("Smith") // Hello Smith
+
+// Challenge
+// By myself
+const greetArr = greeting => function (name) {
+  console.log(`${greeting} ${name}`);
+}
+greetArr("Hi")("Mark"); // Hi Mark
+// Another way
+const greetArr2 = greeting => name => console.log(`${greeting} ${name}`);
+greetArr2("Hi")("Mark"); // Hi Mark
+*/
+
+
