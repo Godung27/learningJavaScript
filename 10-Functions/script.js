@@ -100,7 +100,7 @@ const greet = function (greeting) {
     console.log(`${greeting} ${name}`);
   }
 }
-const greetHi = greet("Hi");
+const greetHi = greet("Hi"); // greetHi = function
 greetHi("Godung"); // Hi Godung
 
 greet("Hello")("Smith") // Hello Smith
@@ -114,6 +114,55 @@ greetArr("Hi")("Mark"); // Hi Mark
 // Another way
 const greetArr2 = greeting => name => console.log(`${greeting} ${name}`);
 greetArr2("Hi")("Mark"); // Hi Mark
+*/
+
+
+/*
+                      // The call and apply Methods
+const eagle = {
+  airline: "Eagle Airline",
+  iataCode: "EA",
+  booking: [],
+  // book: function () {},
+  book(flightNum, name) {
+    console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`);
+
+    this.booking.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+}
+
+eagle.book(222, "Godung"); // Godung booked a seat on Eagle Airline flight LH222
+console.log(eagle);
+
+const flyHigh = {
+  airline: "Fly High",
+  iataCode: "FH",
+  booking: [],
+};
+const book = eagle.book;
+
+  // Dose NOT work
+// book(777, "Smith"); // "this" keyword point to undefined
+
+  // Call method
+book.call(flyHigh, 653, "Smith"); // Set "this" keyword point to flyHigh
+// Smith booked a seat on Fly High flight FH653
+console.log(flyHigh);
+
+const tigerStar = {
+  airline: "Tiger Star",
+  iataCode: "TS",
+  booking: [],
+};
+book.call(tigerStar, 777, "Tony");
+book.call(tigerStar, 930, "Nick");
+console.log(tigerStar);
+
+  // Apply method
+const flightBooking = [537, "Ron"];
+book.apply(tigerStar, flightBooking);
+
+book.call(tigerStar, ...flightBooking) // same
 */
 
 
