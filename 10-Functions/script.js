@@ -229,3 +229,22 @@ const addVat7 = addTaxRate(0.7);
 console.log(addTaxRate(0.1)(200));
 console.log(addVat7(200));
 */
+
+
+/*
+                      // Immediately Invoked Function Expressions (IIFE)
+const run = function () {
+  console.log("Run");
+}
+run();
+run();
+
+  // IIFE (Run function once time)
+(function () {
+  console.log("Run Only Once");
+})();
+
+  // IIFE Arrow
+(() => console.log("Run Only Once Arrow"))();
+*/
+
