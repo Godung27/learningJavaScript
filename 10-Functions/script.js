@@ -248,3 +248,22 @@ run();
 (() => console.log("Run Only Once Arrow"))();
 */
 
+
+/*
+                      // Closures
+const secureBooking = function () {
+  let people = 0;
+  return function () {
+    people++;
+    console.log(people);
+  }
+}
+const booking = secureBooking();
+
+booking(); // 1
+booking(); // 2
+booking(); // 3
+
+console.dir(booking);
+*/
+
