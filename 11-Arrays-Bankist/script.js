@@ -113,3 +113,21 @@ console.log([...arr, ...arr2]); // ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
 console.log(letter.join("/")) // a/b/c/d/e/f/g/h/i
 */
 
+
+/*
+                      // The New at Method
+const arr = [27, 7, 9];
+console.log(arr[0]); // 27
+console.log(arr.at(0)); // 27
+
+  // Getting last
+console.log(arr[arr.length - 1]); // 9
+console.log(arr.slice(-1)[0]); // 9
+console.log(arr.at(-1)); // 9
+
+  // At also with string
+const name = "John";
+console.log(name.at(0)); // J
+console.log(name.at(-1)); // n
+*/
+
