@@ -267,3 +267,49 @@ booking(); // 3
 console.dir(booking);
 */
 
+
+/*
+                      // More Closure Examples
+    // Example 1
+let x;
+
+const first = function () {
+  const a = 10;
+  x = function () {
+    console.log(a * 2);
+  }
+}
+
+const second = function () {
+  const b = 999;
+  x = function () {
+    console.log(b * 2);
+  }
+}
+
+first();
+x(); // 20
+
+second();
+x(); // 1998
+
+    // Example 2
+const boarding = function (n, wait) {
+  const group = n / 5;
+
+  setTimeout(function () {
+    console.log(`${n} passengers`);
+    console.log(`There are 5 groups, each with ${group} passengers`)
+  }, wait * 1000);
+
+  console.log(`Start boarding in ${wait} second`);
+}
+
+// const group = 20;
+boarding(200, 5);
+*/
+
+
+
+
+
