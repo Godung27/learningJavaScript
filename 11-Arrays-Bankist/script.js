@@ -71,7 +71,6 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -89,7 +88,7 @@ console.log(arr.slice(0, -1)); // ['a', 'b', 'c', 'd']
 console.log(arr.slice()); // ["a", "b", "c", "d", "e"]
 console.log([...arr]); // ["a", "b", "c", "d", "e"]
 
-  // SPLICE
+// SPLICE
     // Change Original Array
 // console.log(arr.splice(3)); // ['d', 'e']
 // console.log(arr); // ['a', 'b', 'c']
@@ -126,8 +125,40 @@ console.log(arr.slice(-1)[0]); // 9
 console.log(arr.at(-1)); // 9
 
   // At also with string
-const name = "John";
-console.log(name.at(0)); // J
-console.log(name.at(-1)); // n
+  const name = "John";
+  console.log(name.at(0)); // J
+  console.log(name.at(-1)); // n
 */
+
+
+/*
+                      // Looping Arrays: forEach
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(`Movement: ${i + 1} You deposited ${movement}`);
+  } else {
+    console.log(`Movement: ${i + 1} You withdrew ${Math.abs(movement)}`);
+  }
+}
+
+console.log("----forEach----")
+  // forEach
+    // Callback function in each iteration
+    // Can't use break
+movements.forEach(function (mov, i, arr) {
+  if (mov > 0) {
+    console.log(`Movement: ${i + 1} You deposited ${mov}`);
+  } else {
+    console.log(`Movement: ${i + 1} You withdrew ${Math.abs(mov)}`);
+  }
+});
+// 0: function (200)
+// 1: function (450)
+// 2: function (400)
+// ... last: function (last)
+*/
+
+
 
