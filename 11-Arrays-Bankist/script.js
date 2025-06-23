@@ -65,17 +65,12 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
 
 
 /////////////////////////////////////////////////
 
 /*
-                      // Simple Array Methods
+// Simple Array Methods
 let arr = ["a", "b", "c", "d", "e"];
 
   // SLICE
@@ -128,7 +123,7 @@ console.log(arr.at(-1)); // 9
   const name = "John";
   console.log(name.at(0)); // J
   console.log(name.at(-1)); // n
-*/
+  */
 
 
 /*
@@ -161,4 +156,23 @@ movements.forEach(function (mov, i, arr) {
 */
 
 
+/*
+                      // forEach With Maps and Sets
+  // Maps
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+currencies.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`)
+});
+
+  // Sets
+const currenciesUnique = new Set(["USD", "USD", "USD", "EUR", "GBP", "EUR"]);
+console.log(currenciesUnique); // {'USD', 'EUR', 'GBP'}
+currenciesUnique.forEach(function (value, _, map) {
+  console.log(value);
+});
+*/
 
