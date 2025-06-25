@@ -192,3 +192,36 @@ console.log(depositFor);
 */
 
 
+/*
+                      // The reduce Method
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+  // accumulate = SUM (SNOWBALL) // (accumulate, current(array), index, entire(array))
+const balance = movements.reduce(function (acc, cur, i, arr) {
+  console.log(`Movement${i}: ${acc}`);
+  return acc + cur;
+}, 0); // Begin Value
+console.log(balance); // 3,840
+
+  // Arrow
+const balanceArr = movements.reduce((acc, cur) => acc + cur, 5); // Begin Value = 5
+console.log(balanceArr); // 3,845
+
+// same
+let balanceFor = 0; // Begin Value
+for (const mov of movements) {
+  balanceFor += mov;
+}
+console.log(balanceFor); // 3,840
+
+    // Example
+  // Max Value
+const balanceMax = movements.reduce(function (acc, mov) {
+  if (acc > mov) {
+    return acc;
+  } else
+    return mov;
+}, movements[0]);
+console.log(balanceMax); // 3,000
+*/
+

@@ -84,6 +84,8 @@ const playMovements = function (movements) {
 }
 playMovements(account1.movements)
 
+
+
 // Computing Usernames
 const createUserName = function (accs) {
   accs.forEach(function (acc) {
@@ -92,3 +94,12 @@ const createUserName = function (accs) {
 }
 createUserName(accounts);
 // console.log(accounts);
+
+
+
+// The reduce Method
+const displayCalcBlance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance}€`;
+}
+displayCalcBlance(account1.movements);
