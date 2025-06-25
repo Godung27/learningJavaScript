@@ -91,4 +91,4 @@ const createUserName = function (accs) {
   });
 }
 createUserName(accounts);
-console.log(accounts);
+// console.log(accounts);
