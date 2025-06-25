@@ -83,3 +83,12 @@ const playMovements = function (movements) {
   });
 }
 playMovements(account1.movements)
+
+// Computing Usernames
+const createUserName = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner.toLowerCase().split(" ").map(name => name[0]).join("");
+  });
+}
+createUserName(accounts);
+console.log(accounts);

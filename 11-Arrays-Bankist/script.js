@@ -128,17 +128,17 @@ playMovements(account1.movements)
 */
 
 
-
-// The map Method
+/*
+                      // The map Method
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const euroToUSD = 1.1;
 
-// Map: Create new Array and New Return form Original
+  // Map: Create new Array and New Return form Original
 const movementToUSD = movements.map(function (mov) {
   return mov * euroToUSD;
 });
 
-// Arrow
+  // Arrow
 const arrMovementToUSD = movements.map(mov => mov * euroToUSD);
 
 console.log(movementToUSD);
@@ -155,5 +155,16 @@ const movementsDescriptions = movements.map(function (mov, i) {
   return `Movement: ${i + 1} You ${mov > 0 ? "deposited" : "withdrew"} ${Math.abs(mov)}`;
 });
 console.log(movementsDescriptions);
+*/
 
+
+
+// Computing Usernames
+const createUserName = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner.toLowerCase().split(" ").map(name => name[0]).join("");
+  });
+}
+createUserName(accounts);
+console.log(accounts);
 
