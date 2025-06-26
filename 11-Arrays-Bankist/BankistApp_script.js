@@ -103,3 +103,19 @@ const displayCalcBlance = function (movements) {
   labelBalance.textContent = `${balance}€`;
 }
 displayCalcBlance(account1.movements);
+
+
+
+// The Magic of Chaining Methods
+const displayCalcSum = function (movements) {
+  const incomeSum = movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomeSum}€`;
+
+  const outcomeSum = movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${Math.abs(outcomeSum)}€`;
+
+  const interest = movements.filter(mov => mov > 0).map(deposite => (deposite * 1.2) / 100).filter(int => int >= 1).reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = `${interest}€`;
+
+}
+displayCalcSum(account1.movements);
