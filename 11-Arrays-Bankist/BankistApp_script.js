@@ -119,3 +119,15 @@ const displayCalcSum = function (movements) {
 
 }
 displayCalcSum(account1.movements);
+
+
+
+// The find Method
+const findAccount = accounts.find(acc => acc.owner === "Sarah Smith");
+// console.log(findAccount);
+
+for (const acc of accounts) {
+  if (acc.owner === "Sarah Smith") {
+    // console.log(findAccount);
+  }
+}
