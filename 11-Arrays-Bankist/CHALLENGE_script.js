@@ -48,7 +48,7 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 
 
 // CHALLENGE #2
-/* 
+/*
 Let's go back to Julia and Kate's study about dogs. This time, they want to convert dog ages to human ages and calculate the average age of the dogs in their study.
 
 Create a function 'calcAverageHumanAge', which accepts an arrays of dog's ages ('ages'), and does the following things in order:
@@ -97,5 +97,10 @@ TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
+/*
+const calcAverageHumanAgeArr = (ages) => ages.map(dogAge => dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4).filter(ages => ages >= 18).reduce((acc, age, i, arr) => acc + age / arr.length, 0);
 
-const calcAverageHumanAge = function () { }
+console.log(calcAverageHumanAgeArr([5, 2, 4, 1, 15, 8, 3]));
+console.log(calcAverageHumanAgeArr([16, 6, 10, 5, 6, 1, 4]));
+*/
+
