@@ -82,7 +82,7 @@ const playMovements = function (movements) {
     containerMovements.insertAdjacentHTML("afterbegin", movementRowHtml);
   });
 }
-playMovements(account1.movements)
+// playMovements(account1.movements);
 
 
 
@@ -102,23 +102,23 @@ const displayCalcBlance = function (movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance}€`;
 }
-displayCalcBlance(account1.movements);
+// displayCalcBlance(account1.movements);
 
 
 
 // The Magic of Chaining Methods
-const displayCalcSum = function (movements) {
-  const incomeSum = movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov, 0);
+const displayCalcSum = function (acc) {
+  const incomeSum = acc.movements.filter(mov => mov > 0).reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomeSum}€`;
 
-  const outcomeSum = movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov, 0);
+  const outcomeSum = acc.movements.filter(mov => mov < 0).reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(outcomeSum)}€`;
 
-  const interest = movements.filter(mov => mov > 0).map(deposite => (deposite * 1.2) / 100).filter(int => int >= 1).reduce((acc, int) => acc + int, 0);
+  const interest = acc.movements.filter(mov => mov > 0).map(deposite => (deposite * acc.interestRate) / 100).filter(int => int >= 1).reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 
 }
-displayCalcSum(account1.movements);
+// displayCalcSum(account1);
 
 
 
@@ -131,3 +131,36 @@ for (const acc of accounts) {
     // console.log(findAccount);
   }
 }
+
+
+
+// Implementing Login
+// Event handler
+let currentAccount;
+
+btnLogin.addEventListener("click", function (e) {
+  // prevent form form summiting
+  e.preventDefault();
+
+  currentAccount = accounts.find(acc => acc.username === inputLoginUsername.value);
+  // console.log(currentAccount);
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display UI and message
+    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(" ")[0]}`;
+    containerApp.style.opacity = 1;
+
+    // Clear input fields
+    inputLoginUsername.value = inputLoginPin.value = "";
+    inputLoginPin.blur();
+
+    // Display movement
+    playMovements(currentAccount.movements);
+
+    // Display balacne
+    displayCalcBlance(currentAccount.movements);
+
+    // Display sum
+    displayCalcSum(currentAccount);
+  }
+});
