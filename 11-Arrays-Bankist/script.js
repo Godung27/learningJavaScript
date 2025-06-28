@@ -305,4 +305,40 @@ console.log(movements.filter(deposit)); // [200, 450, 3000, 70, 1300]
 */
 
 
+/*
+                      // flat and flatMap
+const arr = [[1, 2, 3], [4, 5], 6, [7]];
+console.log(arr); // [Array(3), Array(2), 6, Array(1)]
+console.log(arr.flat()); // [1, 2, 3, 4, 5, 6, 7] (deeper 1 level)
+
+const deepArr = [[[1, 2], [3]], [[4], 5], 6, [7]];
+console.log(deepArr); // [Array(2), Array(2), 6, Array(1)]
+// console.log(deepArr.flat()); // [Array(2), Array(1), Array(1), 5, 6, 7]
+console.log(deepArr.flat(2)); // [1, 2, 3, 4, 5, 6, 7] (flat(2) = deeper 2 level)
+
+    // Example
+const account1 = {
+  movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+};
+const account2 = {
+  movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+};
+const account3 = {
+  movements: [200, -200, 340, -300, -20, 50, 400, -460],
+};
+const account4 = {
+  movements: [430, 1000, 700, 50, 90],
+};
+const accounts = [account1, account2, account3, account4];
+
+  // Flat
+const overallBalance = accounts.map(acc => acc.movements).flat().reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance);
+
+  // FlatMap: flat + map (deeper 1 level)
+const overallBalance2 = accounts.flatMap(acc => acc.movements).reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance2);
+*/
+
+
 
