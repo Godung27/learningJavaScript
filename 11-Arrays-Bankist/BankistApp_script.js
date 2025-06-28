@@ -173,6 +173,7 @@ btnLogin.addEventListener("click", function (e) {
 // Implementing Transfers
 btnTransfer.addEventListener("click", function (e) {
   e.preventDefault();
+
   const amount = Number(inputTransferAmount.value);
   const reciverAcc = accounts.find(acc => acc.username === inputTransferTo.value);
 
@@ -205,4 +206,25 @@ btnClose.addEventListener("click", function (e) {
     containerApp.style.opacity = 0;
   }
   inputCloseUsername.value = inputClosePin.value = "";
-})
+});
+
+
+
+// some and every
+btnLoan.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const amout = Number(inputLoanAmount.value);
+
+  if (amout > 0 && currentAccount.movements.some(mov => mov > amout * 0.1)) {
+    // Add movement
+    currentAccount.movements.push(amout);
+  }
+
+  // Update UI
+  updateUI(currentAccount);
+
+  inputLoanAmount.value = "";
+});
+
+
