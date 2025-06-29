@@ -200,8 +200,7 @@ console.log(heaviestFetchBreed);
 */
 
 
-// Coding Challenge #5
-
+// CHALLENGE #5
 /* 
 Julia and Kate are still studying dogs. This time they are want to figure out if the dogs in their are eating too much or too little food.
 
@@ -224,7 +223,12 @@ YOUR TASKS:
 HINT 1: Use many different tools to solve these challenges, you can use the summary lecture to choose between them 😉
 HINT 2: Being within a range 10% above and below the recommended portion means: current > (recommended * 0.90) && current < (recommended * 1.10). Basically, the current portion should be between 90% and 110% of the recommended portion.
 
+GOOD LUCK 😀
+
 TEST DATA:
+*/
+
+/*
 const dogs = [
   { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
   { weight: 8, curFood: 200, owners: ['Matilda'] },
@@ -233,6 +237,48 @@ const dogs = [
   { weight: 32, curFood: 340, owners: ['Michael'] },
 ];
 
-GOOD LUCK 😀
-*/
+// 1.
+dogs.forEach(dog => dog.recFood = Math.floor(dog.weight ** 0.75 * 28));
+console.log(dogs);
 
+// 2.
+const sarahDog = dogs.find(dog => dog.owners.includes("Sarah"));
+console.log(`Sarah's dog eating too ${sarahDog.curFood > sarahDog.recFood ? "much" : "little"}`);
+
+// 3.
+const ownersTooMuch = dogs.filter(dog => dog.curFood > dog.recFood).flatMap(dog => dog.owners);
+const ownersTooLittle = dogs.filter(dog => dog.curFood < dog.recFood).flatMap(dog => dog.owners);
+console.log(ownersTooMuch, ownersTooLittle);
+
+// 4.
+console.log(`${ownersTooMuch.join(" and ")}'s dogs are eating too much`);
+console.log(`${ownersTooLittle.join(" and ")}'s dogs are eating too little`);
+
+// 5.
+console.log(dogs.some(dog => dog.curFood === dog.recFood));
+
+// 6.
+const checkEatingOkay = dog => dog.curFood < dog.recFood * 1.1 && dog.curFood > dog.recFood * 0.9;
+
+console.log(dogs.every(checkEatingOkay));
+
+// 7.
+const dogEatingOkay = dogs.filter(checkEatingOkay);
+console.log(dogEatingOkay);
+
+// 8.
+const groupDogFood = Object.groupBy(dogs, dog => {
+  if (dog.curFood === dog.recFood) return "exact";
+  if (dog.curFood > dog.recFood) return "too-much";
+  if (dog.curFood < dog.recFood) return "too-little";
+});
+console.log(groupDogFood);
+
+// 9.
+const groupDogNumOwners = Object.groupBy(dogs, dog => dog.owners.length);
+console.log(groupDogNumOwners);
+
+// 10. Sort the dogs array by recommended food portion in an ascending order. Make sure to NOT mutate the original array!
+const sortDogFood = dogs.toSorted((a, b) => a.recFood - b.recFood);
+console.log(sortDogFood);
+*/
