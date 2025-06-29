@@ -416,3 +416,32 @@ console.log(groupAccType);
 */
 
 
+/*
+                      // More Ways of Creating and Filling Arrays
+const arr = [1, 2, 3, 4, 5];
+const arrNew = new Array(1, 2, 3, 4, 5);
+console.log(arr); // [1, 2, 3, 4, 5]
+console.log(arrNew); // [1, 2, 3, 4, 5]
+
+  // Empty array + fill method
+    // fill: Change Original
+const x = new Array(5);
+console.log(x); // [empty × 5]
+x.fill(1); // fill(value)
+console.log(x); // [1, 1, 1, 1, 1]
+
+arr.fill(27, 2, 4); // fill(value, start, end)
+console.log(arr); // [1, 2, 27, 27, 5]
+
+  // Array.form
+const y = Array.from({ length: 5 }, () => 2);
+console.log(y); // [2, 2, 2, 2, 2]
+
+const z = Array.from({ length: 3 }, (cur, i) => i + 1);
+// Array.from( length ), (cur, i) (like .map())
+console.log(z); // [1, 2, 3]
+
+const randomNum = Array.from({ length: 7 }, () => Math.trunc(Math.random() * 10 + 1));
+console.log(randomNum);
+*/
+
