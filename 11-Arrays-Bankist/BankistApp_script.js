@@ -67,10 +67,13 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 
 // Creating DOM Elements
-const playMovements = function (movements) {
+const playMovements = function (movements, sort = false) {
   containerMovements.innerHTML = "";
 
-  movements.forEach(function (mov, i) {
+  // Sorting Arrays
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+
+  movs.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
     const movementRowHtml = `
     <div class="movements__row">
@@ -227,4 +230,14 @@ btnLoan.addEventListener("click", function (e) {
   inputLoanAmount.value = "";
 });
 
+
+
+// Sorting Arrays
+let sorted = false;
+btnSort.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  playMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
+});
 
