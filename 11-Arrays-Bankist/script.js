@@ -445,3 +445,25 @@ const randomNum = Array.from({ length: 7 }, () => Math.trunc(Math.random() * 10 
 console.log(randomNum);
 */
 
+
+/*
+                      // Non-Destructive Alternatives: toReversed, toSorted, toSpliced, with
+  // toReversed, toSorted, toSpliced, with: 
+    // Create New Array
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+  // toReversed: similar like revered
+    // Create New Array
+const reverseMovements = movements.toReversed();
+console.log(reverseMovements);
+console.log(movements)
+
+  // toSorted, toSpliced: similar like sort, splice
+
+  // with
+    // Create New Array
+const newMovements = movements.with(1, 27); // with(position, value)
+console.log(newMovements);
+console.log(movements);
+*/
+
