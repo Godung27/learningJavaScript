@@ -368,3 +368,51 @@ movements.sort((a, b) => b - a);
 console.log(movements); // [3000, 1300, 450, 200, 70, -130, -400, -650]
 */
 
+
+/*
+                      // Array Grouping
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const groupMovements = Object.groupBy(movements, mov => mov > 0 ? "deposits" : "withdrawals");
+console.log(groupMovements);
+// deposits : (5) [200, 450, 3000, 70, 1300]
+// withdrawals : (3) [-400, -650, -130]
+
+    // Example
+const accou1 = {
+  owner: 'Jonas Schmedtmann',
+  movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+  type: "premium",
+};
+const accou2 = {
+  owner: 'Jessica Davis',
+  movements: [5000, 3400, -150, -790, -3210],
+  type: "standard",
+};
+const accou3 = {
+  owner: 'Steven Thomas Williams',
+  movements: [200, -200, 340],
+  type: "basic",
+};
+const accou4 = {
+  owner: 'Sarah Smith',
+  movements: [430, 1000],
+  type: "basic",
+};
+const accous = [accou1, accou2, accou3, accou4];
+
+const groupByActivity = Object.groupBy(accous, acc => {
+  const movementCount = acc.movements.length;
+  if (movementCount >= 8) return "very active";
+  if (movementCount >= 5) return "active";
+  if (movementCount >= 1) return "moderate";
+  return "inactive";
+});
+console.log(groupByActivity);
+
+// const groupAccType = Object.groupBy(accous, acc => acc.type);
+const groupAccType = Object.groupBy(accous, ({ type }) => type);
+console.log(groupAccType);
+*/
+
+
